@@ -1,8 +1,8 @@
-package com.thetestingacademy;
+package com.thetestingacademy.ex_01_RA_Basics;
 
 import io.restassured.RestAssured;
 
-public class Lab01_RA {
+public class APITesting_Lab01_RA {
     public static void main(String[] args) {
         RestAssured.given()
                     .baseUri("https://restful-booker.herokuapp.com/ping")
