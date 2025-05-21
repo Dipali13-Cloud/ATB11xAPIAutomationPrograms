@@ -1,27 +1,23 @@
 package com.thetestingacademy.ex_06_TestAssetions;
 
-import io.qameta.allure.Description;
-import io.qameta.allure.Owner;
-import io.qameta.allure.Severity;
-import io.qameta.allure.SeverityLevel;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.response.ValidatableResponse;
 import io.restassured.specification.RequestSpecification;
 import org.hamcrest.Matchers;
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
-public class APITesting028_RestAssured_TestNG_AssertJ_Assertions {
+import static org.assertj.core.api.Assertions.*;
+
+public class APITesting028_RestAssured_TestNG_AssertJ_Assertions{
     RequestSpecification requestSpecification;
     Response response;
     ValidatableResponse validatableResponse;
     String token;
     Integer bookingID;
 
-    @Owner("Dipali")
-    @Severity(SeverityLevel.CRITICAL)
-    @Description("TC#1 - Verify that the create booking is working fine, booking ID is not null")
     @Test
     public void test_createBooking_POST(){
         // String Payload
@@ -62,6 +58,28 @@ public class APITesting028_RestAssured_TestNG_AssertJ_Assertions {
         validatableResponse.body("booking.depositpaid",Matchers.equalTo(true));
         validatableResponse.body("bookingid",Matchers.notNullValue());
 
+
+        bookingID =  response.then().extract().path("bookingid");
+        String firstname = response.then().extract().path("booking.firstname");
+        String lastname = response.then().extract().path("booking.lastname");
+
+        // TestNG Assertions - 75%
+        // SoftAssert vs
+        // HardAssert -
+        // This means that if any assertion fails,
+        // the remaining statements in that test method will not be executed.
+        Assert.assertEquals(firstname,"Dipali");
+        Assert.assertEquals(lastname,"Kunwar");
+        Assert.assertNotNull(bookingID);
+
+        //
+        // AssertJ( 3rd- Lib to Assertions) - 20%
+
+        assertThat(bookingID).isNotZero().isNotNull().isPositive();
+        assertThat(firstname).isEqualTo("Dipali").isNotBlank().isNotEmpty().isNotNull().isAlphanumeric();
+
+        //        String s = ""; //Empty
+        //        String s2 = " "; //Blank
 
     }
 
