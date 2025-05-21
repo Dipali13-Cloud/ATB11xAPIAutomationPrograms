@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex04_RestAssured_HTTP_Methods.POST;
+package com.thetestingacademy.ex_04_RestAssured_HTTP_Methods.POST;
 
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;

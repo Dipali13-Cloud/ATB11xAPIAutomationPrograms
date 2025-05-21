@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex04_RestAssured_HTTP_Methods.GET;
+package com.thetestingacademy.ex_04_RestAssured_HTTP_Methods.GET;
 
 import io.restassured.RestAssured;
 import io.restassured.response.Response;
