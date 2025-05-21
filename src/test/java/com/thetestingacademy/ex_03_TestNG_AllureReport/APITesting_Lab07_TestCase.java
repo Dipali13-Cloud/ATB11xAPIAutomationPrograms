@@ -7,7 +7,7 @@ public class APITesting_Lab07_TestCase {
     String pincode = "110048";
 
     @Test
-    public void test_GET_POSITIVE_TC1() {
+    public void test_GET_POSITIVE_TC01() {
         pincode = "110048";
         RestAssured
                 .given()
@@ -21,7 +21,7 @@ public class APITesting_Lab07_TestCase {
     }
 
     @Test
-    public void test_GET_NEGATIVE_TC2() {
+    public void test_GET_NEGATIVE_TC02() {
         pincode = "@";
         RestAssured
                 .given()
