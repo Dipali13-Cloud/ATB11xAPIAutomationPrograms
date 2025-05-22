@@ -1,6 +1,6 @@
-package com.thetestingacademy.ex_07_Payload_management.Class.Manual.ResponsePayload;
+package com.thetestingacademy.ex_07_Payload_management.Class.manual.responsePayload;
 
-import com.thetestingacademy.ex_07_Payload_management.Class.Manual.RequestPayload.Booking;
+import com.thetestingacademy.ex_07_Payload_management.Class.manual.requestPayload.Booking;
 
 public class BookingResponse {
 

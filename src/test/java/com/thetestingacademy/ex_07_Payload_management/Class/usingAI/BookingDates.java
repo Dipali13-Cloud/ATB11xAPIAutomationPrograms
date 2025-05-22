@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_07_Payload_management.Class.UsingAI;
+package com.thetestingacademy.ex_07_Payload_management.Class.usingAI;
 
 public class BookingDates {
 

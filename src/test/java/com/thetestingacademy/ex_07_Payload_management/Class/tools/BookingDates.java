@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_07_Payload_management.Class.Tools;
+package com.thetestingacademy.ex_07_Payload_management.Class.tools;
 
 import java.util.LinkedHashMap;
 import java.util.Map;

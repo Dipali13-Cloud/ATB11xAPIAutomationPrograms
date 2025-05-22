@@ -1,4 +1,4 @@
-package com.thetestingacademy.ex_07_Payload_management.Class.Manual.RequestPayload;
+package com.thetestingacademy.ex_07_Payload_management.Class.manual.requestPayload;
 
 public class Booking {
 
